@@ -45,6 +45,18 @@ public class Player {
     }
     
     
+    // Name creation
+    
+    /**
+     * Ask the name of the player.
+     */
+    public void askName() {
+        System.out.println("What is the name of the player ?");
+        Scanner scanner = new Scanner(System.in);
+        this.name = scanner.nextLine();
+    }
+    
+    
     // Combination choice
     
     /**
