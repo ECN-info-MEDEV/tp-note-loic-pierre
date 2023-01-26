@@ -34,6 +34,29 @@ public class Player {
         this.name = name;
     }
     
+    // Getters
+
+    /**
+     * Getter for name.
+     * @return the name of the player.
+     */
+    public String getName() {
+        return name;
+    }
+    
+    
+    // Name creation
+    
+    /**
+     * Ask the name of the player.
+     */
+    public void askName() {
+        System.out.println("What is the name of the player ?");
+        Scanner scanner = new Scanner(System.in);
+        this.name = scanner.nextLine();
+    }
+    
+    
     // Combination choice
     
     /**
