@@ -23,6 +23,11 @@ public class Player {
      */
     private String name;
     
+    /**
+     * Score of the player.
+     */
+    private int score;
+    
     
     // Constructors
 
@@ -30,8 +35,9 @@ public class Player {
      * Constructor for the player.
      * @param name the name of the player
      */
-    public Player(String name) {
+    public Player(String name, int score) {
         this.name = name;
+        this.score = score;
     }
     
     // Getters
@@ -42,6 +48,30 @@ public class Player {
      */
     public String getName() {
         return name;
+    }
+    
+    /**
+     * Getter for score.
+     * @return the score of the player.
+     */
+    public int getScore() {
+        return score;
+    }
+
+    /**
+     * Set the name of the player.
+     * @param name the new name of the player
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * Set the score of the player.
+     * @param score the new score of the player
+     */
+    public void setScore(int score) {
+        this.score = score;
     }
     
     

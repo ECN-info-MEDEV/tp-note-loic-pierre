@@ -17,8 +17,8 @@ public class Main {
     public static void main(String[] args) {
         
         // Create the players
-        Player player1 = new Player("");
-        Player player2 = new Player("");
+        Player player1 = new Player("", 0);
+        Player player2 = new Player("", 0);
         player1.askName();
         player2.askName();
         

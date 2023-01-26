@@ -17,9 +17,10 @@ public class Decoder extends Player {
     /**
      * Constructor for the decoder.
      * @param name the name of the decoder
+     * @param score the score of the decoder
      */
-    public Decoder(String name) {
-        super(name);
+    public Decoder(String name, int score) {
+        super(name, score);
     }
  
     

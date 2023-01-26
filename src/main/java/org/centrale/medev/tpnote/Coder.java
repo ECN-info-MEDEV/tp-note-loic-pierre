@@ -19,9 +19,10 @@ public class Coder extends Player {
     /**
      * Constructor for the coder.
      * @param name the name of the coder
+     * @param score the score of the coder
      */
-    public Coder(String name) {
-        super(name);
+    public Coder(String name, int score) {
+        super(name, score);
     }
     
     // Code creation
