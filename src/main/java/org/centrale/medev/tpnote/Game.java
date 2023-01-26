@@ -81,6 +81,8 @@ public class Game {
             if (!answer.equals("y") && !answer.equals("n")) {
                 correctAnswer = false;
                 System.out.println("Write 'y' or 'n' for yes or no.");
+            } else {
+                correctAnswer = true;
             }
         }
         return answer.equals("y");
