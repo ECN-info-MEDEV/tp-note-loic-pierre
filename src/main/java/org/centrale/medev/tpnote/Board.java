@@ -127,8 +127,16 @@ public class Board {
         this.setCode(coder.getCode());
         //initialize turns 
         for (int turn = 0; turn < 12; turn++){
-            //print state of the board before the decoder makes a guess : 
-            System.out.println();
+            //print state of the board before the decoder makes a guess :
+            if (turn > 0){
+                for (int i = 0; i < turn + 1; i++){
+                    List<String> temp = colors(this.getGuessList().get(i));
+                    System.out.println("Current game board :" + "\n" +
+                            temp.get(0) + ", " + temp.get(1) + ", " + temp.get(2) + ", " + temp.get(3) + "\n" +
+                            "White = " + coder.getNbWhite() + "; Black = " + coder.getNbBlack());
+                }
+            }
+
             
             //getting the guess of the current turn
             List<Integer> guess = decoder.getGuess();
@@ -155,7 +163,7 @@ public class Board {
         return 12;
     }
     
-    public List<String> getColors(List<Integer> guess) {
+    public List<String> colors(List<Integer> guess) {
         final String[] COLORS = new String[]{"Jaune", "Bleu", "Rouge", "Vert"};
         List<String> colorList = new ArrayList<>(4);
         for (int i = 0; i< 4; i++){
