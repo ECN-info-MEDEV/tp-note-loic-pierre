@@ -22,6 +22,14 @@ public class Decoder extends Player {
     public Decoder(String name, int score) {
         super(name, score);
     }
+    
+    /**
+     * Constructor for the decoder.
+     * @param player the player who will be a decoder
+     */
+    public Decoder(Player player) {
+        super(player.getName(), player.getScore());
+    }
  
     
     // Guess creation

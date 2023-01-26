@@ -25,6 +25,14 @@ public class Coder extends Player {
         super(name, score);
     }
     
+    /**
+     * Constructor for the coder.
+     * @param player the player who will be a coder
+     */
+    public Coder(Player player) {
+        super(player.getName(), player.getScore());
+    }
+    
     // Code creation
     
     /**
