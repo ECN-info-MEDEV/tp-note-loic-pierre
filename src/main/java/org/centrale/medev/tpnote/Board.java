@@ -12,7 +12,8 @@ import java.util.List;
  * @author Pierre Baudet, Loïc Patigny
  */
 public class Board {
-    //Attributs
+    
+    // Attributes
     
     /**
      * Array List containing the code of the coder
@@ -46,9 +47,10 @@ public class Board {
     
      /**
      * sets the code of the current game
+     * @param code the new code
      */
-    public void setCode(List<Integer> Code) {
-        this.code = Code;
+    public void setCode(List<Integer> code) {
+        this.code = code;
     }
     
      /**
@@ -61,9 +63,10 @@ public class Board {
 
      /**
      * sets the Guess List of the current game
+     * @param guessList the new guess list
      */
-    public void setGuessList(List<List<Integer>> GuessList) {
-        this.guessList = GuessList;
+    public void setGuessList(List<List<Integer>> guessList) {
+        this.guessList = guessList;
     }
 
      /**
@@ -76,6 +79,7 @@ public class Board {
 
      /**
      * sets the decoder of the current game
+     * @param decoder the new decoder
      */    
     public void setDecoder(Decoder decoder) {
         this.decoder = decoder;
@@ -91,6 +95,7 @@ public class Board {
 
      /**
      * sets the coder of the current game
+     * @param coder the new coder
      */    
     public void setCoder(Coder coder) {
         this.coder = coder;
