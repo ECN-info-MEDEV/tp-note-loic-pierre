@@ -99,8 +99,22 @@ public class Board {
     
     //Constructors
 
+    /**
+     * Empty Constructor
+     */
     public Board() {
     }
+    
+    /**
+     * Board constructor
+     * @param decoder the decoder player
+     * @param coder the coder player
+     */
+    public Board(Decoder decoder, Coder coder) {
+        this.decoder = decoder;
+        this.coder = coder;
+    }
+    
     
     //Methods
     
@@ -113,6 +127,9 @@ public class Board {
         this.setCode(coder.getCode());
         //initialize turns 
         for (int turn = 0; turn < 12; turn++){
+            //print state of the board before the decoder makes a guess : 
+            System.out.println();
+            
             //getting the guess of the current turn
             List<Integer> guess = decoder.getGuess();
             
@@ -122,7 +139,6 @@ public class Board {
             }
             //The guess is wrong, the coder indicates black/white marking
             else {
-                score = score + 1;
                 int nbBlack = coder.getNbBlack();
                 int nbWhite = coder.getNbWhite();
                 guess.add(nbBlack);
@@ -138,6 +154,17 @@ public class Board {
         System.out.println(coder.getName() + ", the coder wins !"); 
         return 12;
     }
+    
+    public List<String> getColors(List<Integer> guess) {
+        final String[] COLORS = new String[]{"Jaune", "Bleu", "Rouge", "Vert"};
+        List<String> colorList = new ArrayList<>(4);
+        for (int i = 0; i< 4; i++){
+            colorList.add(COLORS[guess.get(i)]);
+        }
+        return colorList;
+    }
+        
+
     
 }
     
