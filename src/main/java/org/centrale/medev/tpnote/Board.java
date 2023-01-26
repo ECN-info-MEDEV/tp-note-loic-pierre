@@ -103,6 +103,7 @@ public class Board {
      * Empty Constructor
      */
     public Board() {
+        this.guessList = new ArrayList<>();
     }
     
     /**
@@ -113,6 +114,7 @@ public class Board {
     public Board(Decoder decoder, Coder coder) {
         this.decoder = decoder;
         this.coder = coder;
+        this.guessList = new ArrayList<>();
     }
     
     
@@ -129,11 +131,11 @@ public class Board {
         for (int turn = 0; turn < 12; turn++){
             //print state of the board before the decoder makes a guess :
             if (turn > 0){
-                for (int i = 0; i < turn + 1; i++){
+                System.out.println("Current game board :");
+                for (int i = 0; i < turn; i++){
                     List<String> temp = colors(this.getGuessList().get(i));
-                    System.out.println("Current game board :" + "\n" +
-                            temp.get(0) + ", " + temp.get(1) + ", " + temp.get(2) + ", " + temp.get(3) + "\n" +
-                            "White = " + coder.getNbWhite() + "; Black = " + coder.getNbBlack());
+                    System.out.println(temp.get(0) + ", " + temp.get(1) + ", " + temp.get(2) + ", " + temp.get(3) + "\n" +
+                            "White = " + this.guessList.get(i).get(5) + "; Black = " + this.guessList.get(i).get(4));
                 }
             }
 
