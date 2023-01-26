@@ -5,6 +5,7 @@
     <artifactId>TPNOTE</artifactId>
     <version>0.1</version>
     <packaging>jar</packaging>
+    
     <properties>
         
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -16,4 +17,32 @@
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
     </properties>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.4.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>org.centrale.medev.tpnote.TPNOTE</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
