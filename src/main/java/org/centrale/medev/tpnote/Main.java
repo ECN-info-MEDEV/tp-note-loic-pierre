@@ -15,7 +15,16 @@ public class Main {
      * @param args the arguments of the main method
      */
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
+        // Create the players
+        Player player1 = new Player("");
+        Player player2 = new Player("");
+        player1.askName();
+        player2.askName();
+        
+        // Create the game and play
+        Game game = new Game(player1, player2);
+        game.play();
     }
     
 }
