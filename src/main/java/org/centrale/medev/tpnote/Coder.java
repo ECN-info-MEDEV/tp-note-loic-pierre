@@ -60,6 +60,7 @@ public class Coder extends Player {
                 nbPieces = scanner.nextInt();
                 isInteger = true;
             } catch (NoSuchElementException e) {
+                System.out.println("Please write a number.");
                 isInteger = false;
             }
         }
